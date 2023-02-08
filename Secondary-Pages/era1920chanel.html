@@ -1,0 +1,260 @@
+<!--This page is one of the many dress detail pages I have created to showcase a specific dress from the era with information. On this
+page you will also be able to save the dress to your saved for later page (and remove it from the page), like a dress and add comments-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../myStyles.css" rel="stylesheet" type="text/css">
+    <title>1920s Dresses - Chanel</title>
+
+    <!--For certain pages I have added the JavaScript directly into the HTML using script tags. The reason I have done this is because I
+    have multiple pages with the same classes, IDs and elements. This meant that when using an external JS file, it made it difficult to
+    differentiate between the different elements on all of the HTML pages. For example, if a user clicked the saved button on one page, it
+    changed the styling of the button on ALL pages. By adding the script below directly into the HTML, it allowed me to differentiate between
+    each page/element.-->
+    <script>
+        //First I have created a function for the save button, which is called when the element is clicked on
+        function saveButtonFunction(){
+            //I have stored the HTML button in a variable
+            let saveButton = document.getElementsByClassName('saveButton');
+            //And reset the variable to only contain index 0 as it had multiple objects within it
+            saveButton = saveButton[0];
+            /*I wanted to create the functionality that allows the user to click the saved button once to save and again to unsave. To do
+            this I've created a counter to count how many times an item is in the savedItems array.*/
+            let counter = 0;
+
+            //I've used a control statement to identify if the savedItems array has more than 0 items in it. It if does, the statement will be executed
+            if (savedItems.length > 0){
+                //I've used a forEach loop to loop through each item in the savedItems array
+                savedItems.forEach(function(item){
+                    //If the item in the array is exactly equal to the saveButton ID, it will add 1 to the counter. 
+                    if (item === saveButton.id){
+                        counter++;
+                    }
+                })
+                //I've then created another control statement which executes depending on the counter amount
+                if (counter > 0){ /*If the counter is greated than 0, it calls the unsave function with the savebutton as a parameter. The reason the
+                                    counter will be greater than 0 is if the user has pressed the save button twice, which means they want to unsave
+                                    the item. This function (and all others in this script) is in main.js which is linked to at the bottom of this file */
+                    unsave(saveButton);
+                }
+                else if (counter === 0){ /*If it exactly equals 0, it calls the saveForLater function with the saveButton as a parameter. This means
+                                            that the button has not already been clicked as the saveButton.id is not present in the savedItems array*/
+                    saveForLater(saveButton);
+                }
+            } //I've also used another else if statement incase the saveItems array is equal to 0, so it can add the first item to the list
+            else if (savedItems.length === 0){
+                saveForLater(saveButton);
+            }
+        }
+
+        //I have then created the exact same function as above, but for the like button
+        function likeButtonFunction(){
+            let likeButton = document.getElementsByClassName('likeButton');
+            likeButton = likeButton[0];
+            let counter = 0;
+
+            if (likedItems.length > 0){
+                likedItems.forEach(function(item){
+                    if (item === likeButton.id){
+                        counter++;
+                    }
+                })
+                if (counter > 0){
+                    unlike(likeButton);
+                }
+                else if (counter === 0){
+                    like(likeButton);
+                }
+            } 
+            else if (likedItems.length === 0){
+                like(likeButton);
+            }
+        }
+    </script>
+</head>
+<body onload="myLoad()"> <!--I have set the body of the HTML to call the myLoad function when loading which is defined in main.js-->
+    <header> <!--The header page is the same as the homepage as I have used the same formatting throughout to keep it consistent-->
+        <nav>
+            <div id="menu">
+                <ul>
+                    <li id="menuItem1"><a href="">ERA</a>
+                        <ul id="menuSubItems">
+                            <li><a href="./era1920.html">1920s</a></li>
+                            <li><a href="./era1940.html">1940s</a></li>
+                            <li><a href="./era1960.html">1960s</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./saved.html">SAVED</a></li>
+                    <li><a href="./about.html">ABOUT</a></li>
+                    <li><a href="../index.html">HOME</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div>
+            <h1 id="mainheading">The History of The Dress</h1>
+            <div id="mainheadingsmall">
+                <h1>The History</h1>
+                <h1>of The Dress</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="detailPageContainer"> <!--I've contained the page contained in one main div so I can use flex box styling. When shrinking
+                                            down the page, the content should automatically shift to fit the page-->
+            <div class="dressImageSmall"> <!--I've used an additional smaller image which is only visible when the page is at a certain width-->
+                <img src="./images/chaneldress.jpg" alt="image of chanel dress">
+            </div>
+            <div id="aboutDress">
+                <div class="dressImage"> <!--I have added an ID to the below image which is identical to the ID on the saveButton. I have done
+                                        this so that I can easily get the corresponding image and store it in the save for later page when the
+                                        save button is clicked-->
+                    <img src="./images/chaneldress.jpg" alt="image of chanel dress" id="era1920chanel">
+                </div>
+                <div>
+                    <h2>Evening Dress, <i style="color:#f51204">1922</i></h2>
+                    <p>This ankle-length evening dress is made of black silk georgette embroidered with golden thread and bugle beads. This evening dress
+                        of the early 1920s illustrates the transition between the romantic picture dress with its wide skirt and the more 'Cubist' 
+                        straight and square shape of the mid 1920s. The stylised embroidered motifs were Chanel's trademark at this period. They witness 
+                        her relationship with the Russian House of Kitmir, who embroidered exclusively for her.</p>
+                    
+                    <table> <!--I've used a table format as I found this the easiest way to layout the information in an easy to read manner-->
+                        <tr>
+                            <th>
+                                Design House:
+                            </th>
+                            <td>
+                                House of Chanel
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Designer:
+                            </th>
+                            <td>
+                                Gabrielle chanel
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Year:
+                            </th>
+                            <td>
+                                1922
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Medium:
+                            </th>
+                            <td>
+                                Silk, glass
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Culture:
+                            </th>
+                            <td>
+                                French
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Source:
+                            </th>
+                            <td>
+                                <a href="https://collections.vam.ac.uk/item/O72654/evening-dress-coco-chanel/" target="_blank">
+                                    Victoria & Albert Museum
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                    <!--Below is the like button and save button. Both have identical IDs as I have used this in my functions to compare elements
+                    and ensure that the correct image is being stored in the saved page. Each button has an onclick function which is called when
+                    the button is clicked. The functions are defined in the script above.-->
+                    <button class="likeButton" id="era1920chanel" onclick="likeButtonFunction()">LIKE</button>
+                    <button class="saveButton" id="era1920chanel" onclick="saveButtonFunction()">SAVE</button>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <hr class="ruleDressPage">
+            <h3 class="commentHeader">leave a comment...</h3>
+        </div>
+
+        <div id="commentSection"> <!--Form for the comment section which is on each dress detail page-->
+            <form>
+                <div>
+                    <label>Name:</label>
+                </div>
+                <div>
+                    <input type="text" id="commentName">
+                </div>
+                <div>
+                    <label>Comment:</label>
+                </div>
+                <div>
+                    <textarea id="commentComment"></textarea>
+                </div>
+                <div id="submitButtonContainer">
+                    <input type="submit" id="commentSubmit" onclick="commentButtonFunction()">
+                </div>
+            </form>
+        </div>
+        <div id="commentsContainer"> <!--Empty div which will contain the comments added by the user-->
+        </div>
+        <div>
+            <hr class="ruleDressPage">
+        </div>
+        <div class="dressContainer"> <!--I've added additional images to the bottom of the page so the user can browse other dresses
+                                        from the same era-->
+            <a href="./era1920soeurs.html">
+                <img src="./images/soeursdress.jpg" alt="photo of 1920s dress by soeurs">
+            </a>
+            <a href="./era1920worth.html">
+                <img src="./images/worthdress.jpg" alt="photo of 1920s dress by worth">
+            </a>
+            <a href="./era1920lanvin.html">
+                <img src="./images/lanvindress.png" alt="photo of 1920s dress by lanvin">
+            </a>
+            <a href="./era1920frances.html">
+                <img src="./images/eveningdress.png" alt="photo of evening dress">
+            </a>
+        </div>
+    </main>
+
+    <footer> <!--The footer is exactly the same as on all other pages as I have tried to keep it consistent-->
+        <div id="newsletterSignUp">
+            <form>
+                <div>
+                    <label id="newsletter1">Want to hear from us?</label>
+                </div>
+                <div>
+                    <label id="newsletter2">Select what content you would like to receive:</label>
+                </div>
+                <div id="newsletterForm">
+                    <input type="radio">
+                    <label>1920s</label>
+                    <input type="radio">
+                    <label>1940s</label>
+                    <input type="radio">
+                    <label>1960s</label>
+                    <input type="radio">
+                    <label>All of the above</label>
+                </div>
+                <div>
+                    <input type="email" placeholder="Email address" id="newsletter3" required>
+                    <input type="submit" id="newsletter4">
+                </div>
+            </form>
+        </div>
+    </footer>
+    <script type="text/javascript" src="../main.js"></script> <!--Finally I have linked to the external script file-->
+</body>
+</html>

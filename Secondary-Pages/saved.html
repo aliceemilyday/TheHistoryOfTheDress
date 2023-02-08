@@ -1,0 +1,77 @@
+<!--This is the saved for later page which contains items that the user has "saved" when browsing the dress detail pages. In the future,
+I would like to add the functionality to remove items directly in the saved for later page. I would do this by adding an 'X' to the corner
+of each image which would have an onclick function. Unfortunately due to time constraints I could not complete this for this task.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../myStyles.css" rel="stylesheet" type="text/css">
+    <title>Saved For later</title>
+</head>
+<!--I have called the myLoadSaved function when the body of the HTMl is loaded-->
+<body onload="myLoadSaved()">
+    <header> <!--The header section is identical to all other pages to keep the site consistent-->
+        <nav>
+            <div id="menu">
+                <ul>
+                    <li id="menuItem1"><a href="">ERA</a>
+                        <ul id="menuSubItems">
+                            <li><a href="./era1920.html">1920s</a></li>
+                            <li><a href="./era1940.html">1940s</a></li>
+                            <li><a href="./era1960.html">1960s</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./saved.html" style="color: #f51204">SAVED</a></li>
+                    <li><a href="./about.html">ABOUT</a></li>
+                    <li><a href="../index.html">HOME</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div>
+            <h1 id="mainheading">The History of The Dress</h1>
+            <div id="mainheadingsmall">
+                <h1>The History</h1>
+                <h1>of The Dress</h1>
+            </div>
+        </div>
+    </header>
+
+    <main> <!--The main body of the page contains a header and an empty div. The div is a container for the saved items which are added using
+            DOM manipulation in main.js-->
+        <h2 id="savedHeader">Saved for Later</h2>
+
+        <div id="savedContainer">
+        </div>
+    </main>
+
+    <footer> <!--The footer is also the same as all other pages-->
+        <div id="newsletterSignUp">
+            <form>
+                <div>
+                    <label id="newsletter1">Want to hear from us?</label>
+                </div>
+                <div>
+                    <label id="newsletter2">Select what content you would like to receive:</label>
+                </div>
+                <div id="newsletterForm">
+                    <input type="radio">
+                        <label>1920s</label>
+                    <input type="radio">
+                        <label>1940s</label>
+                    <input type="radio">
+                        <label>1960s</label>
+                    <input type="radio">
+                        <label>All of the above</label>
+                </div>
+                <div>
+                    <input type="email" placeholder="Email address" id="newsletter3" required>
+                    <input type="submit" id="newsletter4">
+                </div>
+            </form>
+        </div>
+    </footer>
+    <script type="text/javascript" src="../main.js"></script> <!--Calling the external JavaScript file-->
+</body>
+</html>

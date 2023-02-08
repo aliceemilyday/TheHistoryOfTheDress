@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../myStyles.css" rel="stylesheet" type="text/css">
+    <title>1920s Dresses - Lanvin</title>
+
+    <script>
+        function saveButtonFunction(){
+            let saveButton = document.getElementsByClassName('saveButton');
+            saveButton = saveButton[0];
+            let counter = 0;
+
+            if (savedItems.length > 0){
+                savedItems.forEach(function(item){
+                    if (item === saveButton.id){
+                        counter++;
+                    }
+                })
+
+                if (counter > 0){
+                    unsave(saveButton);
+                }
+                else if (counter === 0){
+                    saveForLater(saveButton);
+                }
+            } 
+            else if (savedItems.length === 0){
+                saveForLater(saveButton);
+            }
+        }
+
+        function likeButtonFunction(){
+            let likeButton = document.getElementsByClassName('likeButton');
+            likeButton = likeButton[0];
+            let counter = 0;
+
+            if (likedItems.length > 0){
+                likedItems.forEach(function(item){
+                    if (item === likeButton.id){
+                        counter++;
+                    }
+                })
+                if (counter > 0){
+                    unlike(likeButton);
+                }
+                else if (counter === 0){
+                    like(likeButton);
+                }
+            } 
+            else if (likedItems.length === 0){
+                like(likeButton);
+            }
+        }
+    </script>
+</head>
+<body onload="myLoad()">
+    <header>
+        <nav>
+            <div id="menu">
+                <ul>
+                    <li id="menuItem1"><a href="">ERA</a>
+                        <ul id="menuSubItems">
+                            <li><a href="./era1920.html">1920s</a></li>
+                            <li><a href="./era1940.html">1940s</a></li>
+                            <li><a href="./era1960.html">1960s</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./saved.html">SAVED</a></li>
+                    <li><a href="./about.html">ABOUT</a></li>
+                    <li><a href="../index.html">HOME</a></li><!--I've included a home button on all pages other than the homepage-->
+                </ul>
+            </div>
+        </nav>
+
+        <div>
+            <h1 id="mainheading">The History of The Dress</h1>
+            <div id="mainheadingsmall">
+                <h1>The History</h1>
+                <h1>of The Dress</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="detailPageContainer">
+            <div class="dressImageSmall">
+                <img src="./images/lanvindress.png" alt="image of lanvin dress">
+            </div>
+            <div id="aboutDress">
+                <div class="dressImage">
+                    <img src="./images/lanvindress.png" alt="image of lanvin dress" id="era1920lanvin">
+                </div>
+                <div>
+                    <h2>Wedding Ensemble, <i style="color:#f51204">1925</i></h2>
+                    <p>	Woman's Wedding Ensemble by Jeanne Lanvin. The dress is crafted from a silk georgette and tulle with silver lamé appliqué and 
+                        silk and metallic thread embroidery. The inner slip is made from a silk satin with metallic lace and the headpiece a silver 
+                        lamé with wax orange blossoms.</p>
+                    
+                    <table>
+                        <tr>
+                            <th>
+                                Design House:
+                            </th>
+                            <td>
+                                House of Lanvin
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Designer:
+                            </th>
+                            <td>
+                                Jeanne Lanvin
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Year:
+                            </th>
+                            <td>
+                                1925
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Medium:
+                            </th>
+                            <td>
+                                Silk, tulle
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Culture:
+                            </th>
+                            <td>
+                                French
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Source:
+                            </th>
+                            <td>
+                                <a href="https://philamuseum.org/collection/object/150828" target="_blank">
+                                    Philadelphia Museum of Art
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+    
+                    <button class="likeButton" id="era1920lanvin" onclick="likeButtonFunction()">LIKE</button>
+                    <button class="saveButton" id="era1920lanvin" onclick="saveButtonFunction()">SAVE</button>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <hr class="ruleDressPage">
+            <h3 class="commentHeader">leave a comment...</h3>
+        </div>
+
+        <div id="commentSection">
+            <form>
+                <div>
+                    <label>Name:</label>
+                </div>
+                <div>
+                    <input type="text" id="commentName">
+                </div>
+                <div>
+                    <label>Comment:</label>
+                </div>
+                <div>
+                    <textarea id="commentComment"></textarea>
+                </div>
+                <div id="submitButtonContainer">
+                    <input type="submit" id="commentSubmit" onclick="commentButtonFunction()">
+                </div>
+            </form>
+        </div>
+        <div id="commentsContainer">
+        </div>
+        <div>
+            <hr class="ruleDressPage">
+        </div>
+        <div class="dressContainer">
+            <a href="./era1920soeurs.html">
+                <img src="./images/soeursdress.jpg" alt="photo of 1920s dress by soeurs">
+            </a>
+            <a href="./era1920worth.html">
+                <img src="./images/worthdress.jpg" alt="photo of 1920s dress by worth">
+            </a>
+            <a href="./era1920chanel.html">
+                <img src="./images/chaneldress.jpg" alt="photo of 1920s dress by chanel">
+            </a>
+            <a href="./era1920frances.html">
+                <img src="./images/eveningdress.png" alt="photo of evening dress">
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div id="newsletterSignUp">
+            <form>
+                <div>
+                    <label id="newsletter1">Want to hear from us?</label>
+                </div>
+                <div>
+                    <label id="newsletter2">Select what content you would like to receive:</label>
+                </div>
+                <div id="newsletterForm">
+                    <input type="radio">
+                    <label>1920s</label>
+                    <input type="radio">
+                    <label>1940s</label>
+                    <input type="radio">
+                    <label>1960s</label>
+                    <input type="radio">
+                    <label>All of the above</label>
+                </div>
+                <div>
+                    <input type="email" placeholder="Email address" id="newsletter3" required>
+                    <input type="submit" id="newsletter4">
+                </div>
+            </form>
+        </div>
+    </footer>
+    <script type="text/javascript" src="../main.js"></script>
+</body>
+</html>

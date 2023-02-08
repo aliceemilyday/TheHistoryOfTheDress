@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../myStyles.css" rel="stylesheet" type="text/css">
+    <title>1940s Dresses - Dior</title>
+
+    <script>
+        function saveButtonFunction(){
+            let saveButton = document.getElementsByClassName('saveButton');
+            saveButton = saveButton[0];
+            let counter = 0;
+
+            if (savedItems.length > 0){
+                savedItems.forEach(function(item){
+                    if (item === saveButton.id){
+                        counter++;
+                    }
+                })
+
+                if (counter > 0){
+                    unsave(saveButton);
+                }
+                else if (counter === 0){
+                    saveForLater(saveButton);
+                }
+            } 
+            else if (savedItems.length === 0){
+                saveForLater(saveButton);
+            }
+        }
+
+        function likeButtonFunction(){
+            let likeButton = document.getElementsByClassName('likeButton');
+            likeButton = likeButton[0];
+            let counter = 0;
+
+            if (likedItems.length > 0){
+                likedItems.forEach(function(item){
+                    if (item === likeButton.id){
+                        counter++;
+                    }
+                })
+                if (counter > 0){
+                    unlike(likeButton);
+                }
+                else if (counter === 0){
+                    like(likeButton);
+                }
+            } 
+            else if (likedItems.length === 0){
+                like(likeButton);
+            }
+        }
+    </script>
+</head>
+<body onload="myLoad()">
+    <header>
+        <nav>
+            <div id="menu">
+                <ul>
+                    <li id="menuItem1"><a href="">ERA</a>
+                        <ul id="menuSubItems">
+                            <li><a href="./era1920.html">1920s</a></li>
+                            <li><a href="./era1940.html">1940s</a></li>
+                            <li><a href="./era1960.html">1960s</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./saved.html">SAVED</a></li>
+                    <li><a href="./about.html">ABOUT</a></li>
+                    <li><a href="../index.html">HOME</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div>
+            <h1 id="mainheading">The History of The Dress</h1>
+            <div id="mainheadingsmall">
+                <h1>The History</h1>
+                <h1>of The Dress</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="detailPageContainer">
+            <div class="dressImageSmall">
+                <img src="./images/diordress2.jpg" alt="image of dior dress">
+            </div>
+            <div id="aboutDress">
+                <div class="dressImage">
+                    <img src="./images/diordress2.jpg" alt="image of dior dress" id="era1940dior2">
+                </div>
+                <div>
+                    <h2>Two-Piece Dress, <i style="color:#f51204">1948</i></h2>
+                    <p>Rounded shoulders, small waist, full hips, and long, full skirt—this pale pink two-piece dress epitomizes Christian Dior's 
+                        revolutionary "New Look" that redefined high fashion's feminine ideal. To emphasize his new shape, the shirt has diagonal 
+                        shoulder seams and stiffened tails that tuck in, while the skirt has a stiff lining and bands of topstitching. Dior presented 
+                        this model, along with 142 other ensembles, at his third couture show. Women's Wear Daily hailed his haute couture collection 
+                        as "modern and wearable . . . geared to the active life of today."</p>
+                    
+                    <table>
+                        <tr>
+                            <th>
+                                Design House:
+                            </th>
+                            <td>
+                                House of Dior
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Designer:
+                            </th>
+                            <td>
+                                Christian Dior
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Year:
+                            </th>
+                            <td>
+                                1948
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Medium:
+                            </th>
+                            <td>
+                                Silk
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Culture:
+                            </th>
+                            <td>
+                                French
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Source:
+                            </th>
+                            <td>
+                                <a href="https://philamuseum.org/collection/object/185957" target="_blank">Philadelphia Museum of Art</a>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <button class="likeButton" id="era1940dior2" onclick="likeButtonFunction()">LIKE</button>
+                    <button class="saveButton" id="era1940dior2" onclick="saveButtonFunction()">SAVE</button>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <hr class="ruleDressPage">
+            <h3 class="commentHeader">leave a comment...</h3>
+        </div>
+
+        <div id="commentSection">
+            <form>
+                <div>
+                    <label>Name:</label>
+                </div>
+                <div>
+                    <input type="text" id="commentName">
+                </div>
+                <div>
+                    <label>Comment:</label>
+                </div>
+                <div>
+                    <textarea id="commentComment"></textarea>
+                </div>
+                <div id="submitButtonContainer">
+                    <input type="submit" id="commentSubmit" onclick="commentButtonFunction()">
+                </div>
+            </form>
+        </div>
+        <div id="commentsContainer">
+        </div>
+        <div>
+            <hr class="ruleDressPage">
+        </div>
+        <div class="dressContainer">
+            <a href="./era1940dior3.html">
+                <img src="./images/diordress3.jpg" alt="photo of dior dress">
+            </a>
+            <a href="./era1940adrian.html">
+                <img src="./images/adriandress.jpg" alt="photo of dress by gilbert adrien">
+            </a>
+            <a href="./era1940dior1.html">
+                <img src="./images/diordress1.jpg" alt="photo of dior dress ">
+            </a>
+            <a href="./era1940balenciaga.html">
+                <img src="./images/balenciagadress.jpg" alt="photo of balenciaga dress">
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div id="newsletterSignUp">
+            <form>
+                <div>
+                    <label id="newsletter1">Want to hear from us?</label>
+                </div>
+                <div>
+                    <label id="newsletter2">Select what content you would like to receive:</label>
+                </div>
+                <div id="newsletterForm">
+                    <input type="radio">
+                    <label>1920s</label>
+                    <input type="radio">
+                    <label>1940s</label>
+                    <input type="radio">
+                    <label>1960s</label>
+                    <input type="radio">
+                    <label>All of the above</label>
+                </div>
+                <div>
+                    <input type="email" placeholder="Email address" id="newsletter3" required>
+                    <input type="submit" id="newsletter4" onclick="addComment()">
+                </div>
+            </form>
+        </div>
+    </footer>
+    <script type="text/javascript" src="../main.js"></script>
+</body>
+</html>

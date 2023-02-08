@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../myStyles.css" rel="stylesheet" type="text/css">
+    <title>1940s Dresses - Gilbert Adrien</title>
+
+    <script>
+        function saveButtonFunction(){
+            let saveButton = document.getElementsByClassName('saveButton');
+            saveButton = saveButton[0];
+            let counter = 0;
+
+            if (savedItems.length > 0){
+                savedItems.forEach(function(item){
+                    if (item === saveButton.id){
+                        counter++;
+                    }
+                })
+
+                if (counter > 0){
+                    unsave(saveButton);
+                }
+                else if (counter === 0){
+                    saveForLater(saveButton);
+                }
+            } 
+            else if (savedItems.length === 0){
+                saveForLater(saveButton);
+            }
+        }
+
+        function likeButtonFunction(){
+            let likeButton = document.getElementsByClassName('likeButton');
+            likeButton = likeButton[0];
+            let counter = 0;
+
+            if (likedItems.length > 0){
+                likedItems.forEach(function(item){
+                    if (item === likeButton.id){
+                        counter++;
+                    }
+                })
+                if (counter > 0){
+                    unlike(likeButton);
+                }
+                else if (counter === 0){
+                    like(likeButton);
+                }
+            } 
+            else if (likedItems.length === 0){
+                like(likeButton);
+            }
+        }
+    </script>
+</head>
+<body onload="myLoad()">
+    <header>
+        <nav>
+            <div id="menu">
+                <ul>
+                    <li id="menuItem1"><a href="">ERA</a>
+                        <ul id="menuSubItems">
+                            <li><a href="./era1920.html">1920s</a></li>
+                            <li><a href="./era1940.html">1940s</a></li>
+                            <li><a href="./era1960.html">1960s</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./saved.html">SAVED</a></li>
+                    <li><a href="./about.html">ABOUT</a></li>
+                    <li><a href="../index.html">HOME</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div>
+            <h1 id="mainheading">The History of The Dress</h1>
+            <div id="mainheadingsmall">
+                <h1>The History</h1>
+                <h1>of The Dress</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="detailPageContainer">
+            <div class="dressImageSmall">
+                <img src="./images/adriandress.jpg" alt="image of adrian dress">
+            </div>
+            <div id="aboutDress">
+                <div class="dressImage">
+                    <img src="./images/adriandress.jpg" alt="image of adrian dress" id="era1940adrian">
+                </div>
+                <div>
+                    <h2>Evening Dress, <i style="color:#f51204">1947</i></h2>
+                    <p>Hollywood costume designer Adrian brought cinematic drama to his ready-to-wear and custom clothing. In contrast to the rounded 
+                        shoulders Christian Dior had introduced, Adrian maintained that women looked best in clothing with wide shoulders, with slim 
+                        hips for day and interesting skirts for night. In this striking gown, elegant velvet flows into a graceful trailing skirt, frames 
+                        a wide neckline, and forms what the New York Times called "winged victory sleeves."</p>
+                    
+                    <table>
+                        <tr>
+                            <th>
+                                Design House:
+                            </th>
+                            <td>
+                                Adrian
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Designer:
+                            </th>
+                            <td>
+                                Adrian
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Year:
+                            </th>
+                            <td>
+                                1947
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Medium:
+                            </th>
+                            <td>
+                                Silk velvet
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Culture:
+                            </th>
+                            <td>
+                                American
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Source:
+                            </th>
+                            <td>
+                                <a href="https://philamuseum.org/collection/object/58403" target="_blank">
+                                    Philadelphia Museum of Art
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+    
+                    <button class="likeButton" id="era1940adrian" onclick="likeButtonFunction()">LIKE</button>
+                    <button class="saveButton" id="era1940adrian" onclick="saveButtonFunction()">SAVE</button>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <hr class="ruleDressPage">
+            <h3 class="commentHeader">leave a comment...</h3>
+        </div>
+
+        <div id="commentSection">
+            <form>
+                <div>
+                    <label>Name:</label>
+                </div>
+                <div>
+                    <input type="text" id="commentName" required>
+                </div>
+                <div>
+                    <label>Comment:</label>
+                </div>
+                <div>
+                    <textarea id="commentComment" required></textarea>
+                </div>
+                <div id="submitButtonContainer">
+                    <input type="submit" id="commentSubmit" onclick="commentButtonFunction()">
+                </div>
+            </form>
+        </div>
+        <div id="commentsContainer">
+        </div>
+        <div>
+            <hr class="ruleDressPage">
+        </div>
+        <div class="dressContainer">
+            <a href="./era1940dior3.html">
+                <img src="./images/diordress3.jpg" alt="photo of dior dress">
+            </a>
+            <a href="./era1940dior1.html">
+                <img src="./images/diordress1.jpg" alt="photo of dior dress ">
+            </a>
+            <a href="./era1940balenciaga.html">
+                <img src="./images/balenciagadress.jpg" alt="photo of balenciaga dress">
+            </a>
+            <a href="./era1940dior2.html">
+                <img src="./images/diordress2.jpg" alt="photo of dior dress">
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div id="newsletterSignUp">
+            <form>
+                <div>
+                    <label id="newsletter1">Want to hear from us?</label>
+                </div>
+                <div>
+                    <label id="newsletter2">Select what content you would like to receive:</label>
+                </div>
+                <div id="newsletterForm">
+                    <input type="radio">
+                    <label>1920s</label>
+                    <input type="radio">
+                    <label>1940s</label>
+                    <input type="radio">
+                    <label>1960s</label>
+                    <input type="radio">
+                    <label>All of the above</label>
+                </div>
+                <div>
+                    <input type="email" placeholder="Email address" id="newsletter3" required>
+                    <input type="submit" id="newsletter4">
+                </div>
+            </form>
+        </div>
+    </footer>
+    <script type="text/javascript" src="../main.js"></script>
+</body>
+</html>

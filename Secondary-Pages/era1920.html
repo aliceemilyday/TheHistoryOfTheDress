@@ -1,0 +1,133 @@
+<!--The 'ERA' pages are created to showcase iconic dresses from that era. I have also added a short description of what was going on at
+the time which influenced fashion. In the future I would like to write my own content for these pages, however due to time constraints I 
+have used copy from external sources (and made sure to link to their work)-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../myStyles.css" rel="stylesheet" type="text/css">
+    <title>1920s Dresses</title>
+</head>
+<body>
+    <header> <!--The header page is the same as the homepage as I have used the same formatting throughout to keep it consistent-->
+        <nav>
+            <div id="menu">
+                <ul>
+                    <li id="menuItem1"><a href="">ERA</a>
+                        <ul id="menuSubItems">
+                            <!--I have added inline styling to colour the about link to signify to the user what page they are on. I've 
+                                used inline styling to override any original styling in the external CSS, and also so I can have it 
+                                styled differently on each page-->
+                            <li><a href="./era1920.html" style="color: #f51204">1920s</a></li>
+                            <li><a href="./era1940.html">1940s</a></li>
+                            <li><a href="./era1960.html">1960s</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./saved.html">SAVED</a></li>
+                    <li><a href="./about.html">ABOUT</a></li>
+                    <li><a href="../index.html">HOME</a></li><!--I've included a home button on all pages other than the homepage-->
+                </ul>
+            </div>
+        </nav>
+
+        <div>
+            <h1 id="mainheading">The History of The Dress</h1>
+            <div id="mainheadingsmall">
+                <h1>The History</h1>
+                <h1>of The Dress</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="heroLP">
+            <figure> <!--This is the hero image of the page. I have used a div again with the image as the background as I find it easier 
+                to manipulate the image without distorting it. I also wanted to add a text overlay in this instance which I find works best 
+                with a div-->
+                <div id="image1920" class="imageContainer"> <!--I've added both a class and ID for this element. As I'm using the same page
+                                                            design on multiple pages, I wanted to add a class so I don't need to write out the 
+                                                            styling multiple times, however I also needed to add an ID to add some unique styling.-->
+                    <div id="year">
+                        <h1>1920</h1>
+                    </div>
+                </div>
+                <figcaption>Woman in Flapper Dress, Unknown</figcaption>
+            </figure>
+
+            <div id="aboutEra"> <!--Similarly to the about page, I've contained my copy in a div so I can edit the styling as a whole-->
+                <h2>The Roaring Twenties</h2>
+                <p>
+                    After swapping dresses for men's overalls to contribute to the war effort, women shifted radically in the clothes they were willing 
+                    to wear following World War I. Boned corsets and full skirts were out, and sleek shapes and relaxed fits were in. Naturally, it's 
+                    the knee-skimming flapper dress that remains the ultimate symbol of 1920s fashion, with dropped waistlines, pleated skirts, and 
+                    art-deco embellishments adding serious glamour to cocktail hour. 
+                </p>
+                <p>
+                    Coco Chanel, of course, played a huge role in transforming wardrobes throughout the decade, specifically in 1926 delivering the classic
+                     LBD. But it wasn't just the Chanel show. Competition came from contemporaries, including Jeanne Lanvin, known for her embellished 
+                     chemise dresses, and Elsa Schiaparelli—Chanel's greatest rival—who famously designed the speakeasy soirée dress, a party frock with
+                      hidden pockets that could cleverly hide a hip flask.
+                </p>
+                <cite> <!--I've also added a cite to link to the source of the copy above-->
+                    Read more on <a href="https://www.whowhatwear.co.uk/fashion-by-the-decade/slide4" target="_blank">Who What Wear.</a>
+                </cite>
+            </div>
+        </div>
+
+        <div>
+            <hr class="rule"> <!--I've added a horizontal rule to separate the sections and altered the styling in CSS-->
+            <h3 class="discoverMore">discover the dresses...</h3> <!--I've tried to use classes where I can so I can reuse the styling-->
+        </div>
+
+        <!--I wanted to create a grid of photos which link out to a detail page. I've used images for this as I'm not altering the images sizes
+        at all. I've also used the target "_blank" to open a separate tab when the link is clicked incase the user wants to view multiple 
+        dresses at once-->
+        <div class="dressContainer">
+            <a href="./era1920soeurs.html" target="_blank">
+                <img src="./images/soeursdress.jpg" alt="photo of 1920s dress by soeurs">
+            </a>
+            <a href="./era1920worth.html" target="_blank">
+                <img src="./images/worthdress.jpg" alt="photo of 1920s dress by worth">
+            </a>
+            <a href="./era1920lanvin.html" target="_blank">
+                <img src="./images/lanvindress.png" alt="photo of 1920s dress by lanvin">
+            </a>
+            <a href="./era1920chanel.html" target="_blank">
+                <img src="./images/chaneldress.jpg" alt="photo of 1920s dress by chanel">
+            </a>
+            <a href="./era1920frances.html" target="_blank">
+                <img src="./images/eveningdress.png" alt="photo of evening dress">
+            </a>
+        </div>
+    </main>
+
+    <footer> <!--Finally we have the footer which is exactly the same as the homepage-->
+        <div id="newsletterSignUp">
+            <form>
+                <div>
+                    <label id="newsletter1">Want to hear from us?</label>
+                </div>
+                <div>
+                    <label id="newsletter2">Select what content you would like to receive:</label>
+                </div>
+                <div id="newsletterForm">
+                    <input type="radio">
+                        <label>1920s</label>
+                    <input type="radio">
+                        <label>1940s</label>
+                    <input type="radio">
+                        <label>1960s</label>
+                    <input type="radio">
+                        <label>All of the above</label>
+                </div>
+                <div>
+                    <input type="email" placeholder="Email address" id="newsletter3" required>
+                    <input type="submit" id="newsletter4">
+                </div>
+            </form>
+        </div>
+    </footer>
+    <script type="text/javascript" src="../main.js"></script>
+</body>
+</html>

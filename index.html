@@ -1,0 +1,89 @@
+<!--When handing this project in for the HTML/CSS task, I had my html pages organised into folders to make it more organised, however I 
+found when writing my JavaScript that having multiple folders was causing errors when trying to set up the save for later page. Although
+have all of the secondary pages in one folder is less organised, it means that the code works correctly.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="myStyles.css" rel="stylesheet" type="text/css">
+    <title>The History of The Dress</title>
+</head>
+
+<body>
+    <header> 
+        <!--I have contained the nav, main heading and hero image within the header as I wanted the heading and hero
+        image to overlay which didn't work when I had the hero image in the main body-->
+        <nav>
+            <div id="menu"> <!--I have added an ID here so I can style the entire menu as a whole and given id's to the individual 
+                            elements that I want to style separately-->
+                <ul> <!--I used an unordered list to create my nav and removed any auto-styling using CSS-->
+                    <li id="menuItem1"><a href="">ERA</a>
+                        <ul id="menuSubItems"> <!--I have created a hidden nav that appears when you hover over menuItem1 (era).
+                                                This is done using 'subitems' within the list which are hidden using CSS until you 
+                                                hover over the menu parent item-->
+                            <li><a href="./Secondary-Pages/era1920.html">1920s</a></li>
+                            <li><a href="./Secondary-Pages/era1940.html">1940s</a></li>
+                            <li><a href="./Secondary-Pages/era1960.html">1960s</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./Secondary-Pages/about.html">ABOUT</a></li>
+                    <li><a href="./Secondary-Pages/saved.html">SAVED</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div> <!--Within the header I have housed the main heading and hero image so I can overlay the two-->
+            <h1 id="mainheading">The History of The Dress</h1>
+            <div id="mainheadingsmall"> <!--I have created two version of the heading and hero image so that I can use media queries 
+                                        to switch between them depending on the page width -->
+                <h1>The History</h1>
+                <h1>of The Dress</h1>
+            </div>
+        </div>
+        <figure>
+            <div id="heroimage"></div> <!--I've used divs as images as I found I could alter the shape and size of the image more 
+                                        easily and add text over the top-->
+            <div id="heroimagesmall"></div>
+            <figcaption>Dovima with Elephants, Richard Avedon, 1955</figcaption>
+        </figure>
+    </header>
+
+    <aside> <!--I have contained my quote in aside tags as the quote is not directly related to the theme of the web page-->
+        <div id="quote">
+            <div>"Fashion is the mirror of history" - Louis XIV</div>
+        </div>
+    </aside>
+
+    <footer> <!--I have created a newsletter sign up form which I have contained in the footer as I want it to be on all pages throughout 
+                the site-->
+        <div id="newsletterSignUp">
+            <form>
+                <div> <!--Ive given each label outside of the radio buttons an ID so I can style them separately-->
+                    <label id="newsletter1">Want to hear from us?</label>
+                </div>
+                <div>
+                    <label id="newsletter2">Select what content you would like to receive:</label>
+                </div>
+                <div id="newsletterForm"> <!--I have created the form using radio buttons so the user can select what content they would 
+                                            like to receive-->
+                    <input type="radio">
+                        <label>1920s</label>
+                    <input type="radio">
+                        <label>1940s</label>
+                    <input type="radio">
+                        <label>1960s</label>
+                    <input type="radio">
+                        <label>All of the above</label>
+                </div>
+                <div>
+                    <!--I've then used the email form input and finally added a submit input button-->
+                    <input type="email" placeholder="Email address" id="newsletter3" required>
+                    <input type="submit" id="newsletter4">
+                </div>
+            </form>
+        </div>
+    </footer>
+    <script type="text/javascript" src="./main.js"></script> <!--Finally I've linked to my JavaScript file-->
+</body> 
+</html>

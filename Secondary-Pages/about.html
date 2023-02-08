@@ -1,0 +1,122 @@
+<!--I wanted to create an about page to explain the purpose/them of the website. I wrote a brief description, however in the future 
+    I would like to add more text to this page and social links-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../myStyles.css" rel="stylesheet" type="text/css">
+    <title>About Us</title>
+</head>
+<body>
+    <header> <!--The header page is the same as the homepage as I have used the same formatting throughout to keep it consistent-->
+        <nav>
+            <div id="menu">
+                <ul>
+                    <li id="menuItem1"><a href="">ERA</a>
+                        <ul id="menuSubItems">
+                            <li><a href="./era1920.html">1920s</a></li>
+                            <li><a href="./era1940.html">1940s</a></li>
+                            <li><a href="./era1960.html">1960s</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./saved.html">SAVED</a></li>
+                    <li><a href="./about.html" style="color: #f51204">ABOUT</a></li><!--I have added inline styling to colour the about 
+                            link to signify to the user what page they are on. I've used inline styling to override any original styling in 
+                            the external CSS, and also so I can have it styled differently on each page-->
+                    <li><a href="../index.html">HOME</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div>
+            <h1 id="mainheading">The History of The Dress</h1>
+            <div id="mainheadingsmall">
+                <h1>The History</h1>
+                <h1>of The Dress</h1>
+            </div>
+        </div>
+    </header>
+
+    <main><!--In the main body I have contained the hero image (figure) and about us section-->
+        <div class="heroLP"> <!--I've used the class 'heroLP' throughout my pages to keep consistent styling and so I can style the group of 
+                                elements as a whole-->
+            <div id="aboutUs"> <!--I've then created a separate ID for the text section to style it separately-->
+                <h2>About Us</h2>
+                <p>
+                    The History of The Dress was created to educate, inform and inspire all those interested in historical fashion. 
+                    We deep-dive into each era that shaped the iconic garment, <i>The Dress</i>, and highlight key pieces to transport you 
+                    back to that moment in history. Please send us dresses that you think we should feature using the contact form below!
+                </p>
+            </div>
+
+            <figure> <!--I've contained my hero image within figure tags and added a figcaption-->
+                <div id="imageAbout"></div> <!--I've added my image as a div for the same reasons as my homepage hero as I find it easier to 
+                                                manipulate the image without distorting it -->
+                <figcaption id="aboutCaption">Veruschka, Richard Avedon, 1967</figcaption> <!--I added a unique ID to this figcaption to style it 
+                                                                                            individually as the page is laid out slightly differently-->
+            </figure>
+        </div>
+        <div>
+            <hr class="ruleDressPage">
+            <h3 class="commentHeader">contact us...</h3>
+        </div>
+
+        <div id="contactUsContainer">
+            <!--Below is the contact us form. I have added IDs throughout to add specific styling to the elements-->
+            <form>
+                <div>
+                    <label>Name:</label>
+                    <input type="text" id="contactName" required>
+                    <label>Email:</label>
+                    <input type="email" id="contactEmail" required>
+                </div>
+                <div>
+                    <label>Reason for contacting:</label>
+                    <select id="contactReason" required>
+                        <option>General Enquiry</option>
+                        <option>Submission</option>
+                        <option>Career Opportunities</option>
+                        <option>Complaint</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Message:</label>
+                    <textarea type="text" id="contactMessage" required></textarea>
+                </div>
+                <div> <!--I've added an onclick event to the submit button which calls the contactUs function, defined in main.js-->
+                    <input type="submit" id="contactSubmit" onclick="contactUs()">
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer> <!--Below is the footer which is exactly the same as the homepage-->
+        <div id="newsletterSignUp">
+            <form>
+                <div>
+                    <label id="newsletter1">Want to hear from us?</label>
+                </div>
+                <div>
+                    <label id="newsletter2">Select what content you would like to receive:</label>
+                </div>
+                <div id="newsletterForm">
+                    <input type="radio">
+                        <label>1920s</label>
+                    <input type="radio">
+                        <label>1940s</label>
+                    <input type="radio">
+                        <label>1960s</label>
+                    <input type="radio">
+                        <label>All of the above</label>
+                </div>
+                <div>
+                    <input type="email" placeholder="Email address" id="newsletter3" required>
+                    <input type="submit" id="newsletter4">
+                </div>
+            </form>
+        </div>
+    </footer>
+    <script type="text/javascript" src="../main.js"></script> <!--Finally I have linked to the external script file-->
+</body>
+</html>

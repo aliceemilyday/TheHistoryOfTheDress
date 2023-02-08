@@ -1,0 +1,703 @@
+/*External styling sheet to style all pages within my pages*/
+
+/*The following blocks style multiple elements across the website so I have grouped them together*/
+
+html {
+    background-color: #d6d0c6;
+}
+
+* { 
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+figcaption {
+    margin-left: 1vw; 
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+cite {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 0.9em;
+}
+
+cite a:hover {color: #f51204;}
+
+
+/*The following blocks style the navigation*/
+
+nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    list-style-type: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5em;
+}
+
+nav ul li {
+    padding: 1em 1em 0 1em;
+}
+
+/*This block of code is styling the 'hidden' menu sub items that appear when you hover over 'ERA'*/
+#menuSubItems {
+    display: none;
+    flex-flow: column nowrap;
+    position: absolute;
+    z-index: 2;
+    background-color: #d6d0c6;
+    opacity: 90%;
+    font-size: 1.8vw;
+    text-align: center;
+}
+
+nav a:hover {color: #f51204;}
+
+/*This is where I have set the hover effect to change the display of #menuSubItems to flex to make it visible*/
+#menuItem1:hover #menuSubItems {display: flex;}
+
+
+/*The following blocks style the main heading which is on every page*/
+
+#mainheading {
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-size: 6vw; 
+    letter-spacing: 0.1rem;
+    color: #f51204;
+    margin-left: 1%;
+}
+
+/*I've created a second version of my main heading for when the page width gets too narrow*/
+#mainheadingsmall {
+    display:none;
+    flex-flow: column wrap;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    font-size: 3.7vw;
+    letter-spacing: 0.1rem;
+    color: #f51204;
+    margin-left: 1%;
+}
+
+
+/*The following blocks style the footer which is on every page on site*/
+
+/*The following section styles the entire newsletterSignUp which is contained in the footer*/
+#newsletterSignUp {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    width: 100%;
+    background-color: #f51204;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #d6d0c6;
+    text-align: center;
+    padding: 2vh 0;
+    line-height: 1.7;
+}
+
+/*In the next 5 blocks of code I am styling the individual elements within the footer */
+#newsletter1 {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+#newsletter2 {
+    font-size: 0.8em;
+}
+
+#newsletterForm {
+    font-size: 0.7em;
+}
+
+#newsletter3 {
+    width: 17vw;
+    height: 18px;
+    padding-left: 5px;
+    border: 1px #d6d0c6 solid;
+    border-radius: 15px;
+}
+
+#newsletter4 {
+    width: 65px;
+    height: 18px;
+    border: 1px #d6d0c6 solid;
+    border-radius: 15px;
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(83, 83, 83);
+}
+
+#newsletter4:hover {color: #f51204;}
+
+
+/*The following blocks style the homepage elements*/
+
+#heroimage {
+    background-image: url("./dovima-with-elephants-richard-avedon.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% ;
+    background-position: center;
+    width: 98%;
+    height: 75vh; 
+    margin: -3% 1% 0 1%;
+    z-index: -1;
+}
+
+/*Below is a smaller version of the hero which is visible when the page width is shrunk down*/
+#heroimagesmall {
+    display: none;
+    background-image: url("./dovima-with-elephants-richard-avedon-small.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    width: 98%;
+    height: 75vh;
+    margin: -3% 1% 0 1%;
+    z-index: -1;
+}
+
+/*This styling is for the quote that sits between the hero image and footer on the homepage*/
+#quote {
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: oblique;
+    font-weight: bold;
+    color: black;
+    text-align: right;
+    margin: 3% 2% 3% 0;
+    font-size: 3.5vw;
+    letter-spacing: -2px;
+}
+
+
+/*The following blocks style elements that are on the 'ERA' landing pages*/
+
+.heroLP { /*Div container for hero image and copy*/
+    display: flex;
+    justify-content: center;
+    margin: 7vh auto 0 auto;
+}
+
+.imageContainer { /*Div that contains image and year*/
+    display: flex;
+    justify-content: flex-start;
+    width: auto;
+    height: 60vh;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: top;
+    border-radius: 5%;
+}
+
+/*The following three blocks of code are setting the background image on the 'ERA' page hero images. I have used div's rather than 
+img, which means I can use CSS to add the image using the unique ID. */
+#image1920 {
+    background-image: url("./Secondary-Pages/images/1920s.jpg");
+}
+
+#image1940  {
+    background-image: url("./Secondary-Pages/images/1940hero.jpg");
+}
+
+#image1960  {
+    background-image: url("./Secondary-Pages/images/1960hero.jpg");
+    width: 29vw;
+    height: 60vh;
+}
+
+/*This is the styling for the copy that overlays the hero image on the 'ERA' pages*/
+#year h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 6em;
+    color: #d6d0c6;
+    margin: -4vh 0 0 -0.5vw;
+}
+
+/*The following blocks of code are styling the copy in the main body of the 'ERA' pages*/
+#aboutEra {
+    width: 45vw;
+    height: 60vh;
+    padding-left: 2vw;
+}
+
+#aboutEra h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.6em;
+    font-style: oblique;
+    white-space: nowrap;
+}
+
+#aboutEra p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.2;
+    font-size: 0.7em;
+    margin: 1vw 0 1vw 0;
+    text-indent: 1vw;
+}
+
+/*I've set the styling of the horizontal rule that i've used to divide the page*/
+.rule {
+    height: 0.6vh;
+    background-color: black;
+    width: 80%;
+    margin: 5vh auto 4vh auto;
+}
+
+/*This block is styling the 'discover the dresses...' copy on the ERA pages*/
+.discoverMore {
+    display: flex;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2em;
+    font-style: oblique;
+    margin: 0 auto 5vh auto;
+}
+
+/*Finally the following three blocks are styling the grid of images at the bottom of the 'ERA' pages*/
+.dressContainer { 
+    display: flex; 
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 7vh;
+}
+
+.dressContainer img {
+    width: auto;
+    height: 55vh;
+}
+
+.dressContainer img:hover {border: 2px solid #f51204;}
+
+
+/*The following blocks of code are styling for the dress detail pages*/
+
+.detailPageContainer { /*Div that contains image, copy and table*/
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin: 2% 0;
+}
+
+.dressImage img { /*Main image styling*/
+    width: 270px;
+    height: auto;
+    padding-right: 3vw;
+}
+
+.dressImageSmall img { /*Styling for smaller main image which is visible when the page is shrunk to a certain width*/
+    display: none;
+    width: 270px;
+    height: auto;
+    padding-right: 3vw;
+}
+
+/*I've set specific styling for one of the dress detail images due to the image dimensions*/
+#pvcDress img, #pvcDressSmall img {
+    width: 200px;
+}
+
+/*The following three blocks of styling are for the header and copy*/
+#aboutDress {
+    display: flex;
+    width: 70%;
+    height: auto;
+    text-align: left;
+}
+
+#aboutDress h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.6em;
+    font-style: oblique;
+    white-space: nowrap;
+}
+
+#aboutDress p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.4;
+    font-size: 0.75em;
+    margin: 1vw 0 1vw 0;
+    text-indent: 1vw;
+}
+
+/*This is the table styling that sits on all dress detail pages*/
+#aboutDress table {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+#aboutDress a:hover {color: #f51204;}
+
+/*Like and save for later button styling*/
+.likeButton, .saveButton {
+    background-color: #000;
+    color: #d6d0c6;
+    border: 1px #d6d0c6 solid;
+    border-radius: 15px;
+    margin: 3vh 1vw 0 0;
+    height: 22px;
+    width: 60px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+}
+
+.likeButton:hover, .saveButton:hover {background-color: #f51204;}
+
+/*I've set the styling of the horizontal rule that i've used to divide the page*/
+.ruleDressPage {
+    height: 0.6vh;
+    background-color: black;
+    width: 80vw;
+    margin: 8vh auto 4vh auto;
+}
+
+/*This block is styling the 'leave a comment' copy on the dress detail pages*/
+.commentHeader {
+    display: flex;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2em;
+    font-style: oblique;
+    margin: 0 auto 5vh auto;
+}
+
+/*Styling below for comment form*/
+#commentSection {
+    display: flex;
+    flex-flow: column wrap;
+    text-align: left;
+    align-items: center;
+    margin-bottom: 3vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.9em;
+}
+
+#commentName, #commentComment {
+    margin: 3px;
+    border: 1.5px black solid;
+    border-radius: 15px;
+    padding: 0 5px;
+    width: 35vw;
+}
+
+#commentName{
+    height: 20px;
+}
+
+#commentComment {
+    padding-top: 5px;
+    height: 100px;
+}
+
+#submitButtonContainer {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#commentSubmit {
+    border: 1.5px black solid;
+    border-radius: 15px;
+    width: 80px;
+    height: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+}
+
+#commentSubmit:hover {color: #f51204;}
+
+/*Styling below for the container which holds the comments created through JavaScript*/
+.commentsContainer {
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    width: 100%;
+}
+
+/*Styling for comments created using JS and user inputs. I set a class when creating the comments using DOM manipulation so I can
+add this styling.*/
+.comment {
+    margin: 0.5% 5%;
+    padding: 1%;
+    border: 2px black solid;
+}
+
+.comment h4 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2em;
+}
+
+.comment h5 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 0.9em;
+    font-style: italic;
+    padding: 1vh 0;
+}
+
+.comment p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.8em;
+}
+
+/*The following blocks of style is for the about us page*/
+
+/*Styling for the image*/
+#imageAbout {
+    width: 30vw;
+    height: 60vh;
+    background-image: url("./Secondary-Pages/images/Richard-Avedon.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: top;
+    border-radius: 5%;
+}
+
+/*Styling for the figcaption as I wanted it to be aligned differently on this page to the other pages*/
+#aboutCaption {
+    margin-right: 1vw;
+    text-align: right;
+    margin-bottom: 7vh;
+}
+
+/*Styling for the copy #aboutUs */
+#aboutUs {
+    width: 31vw;
+    height: 60vh;
+    padding: 2vw 1vw 0 0;
+    text-align: right;
+}
+
+#aboutUs h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3em;
+    font-style: oblique;
+}
+
+#aboutUs p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.2;
+    font-size: 0.9em;
+    margin: 1vw 0 1vw 0;
+    text-indent: 1vw;
+}
+
+/*Styling for contact us form*/
+#contactUsContainer {
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 5vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.9em;
+}
+
+#contactName, #contactEmail {
+    margin: 5px;
+    border: 1.5px black solid;
+    border-radius: 15px;
+    padding: 0 5px;
+    width: 15vw;
+    height: 18px;
+}
+
+#contactReason {
+    margin: 5px;
+    border: 1.5px black solid;
+    border-radius: 15px;
+    padding: 0 5px;
+    width: 27vw;
+    height: 20px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.9em;
+}
+
+#contactMessage {
+    margin: 5px;
+    border: 1.5px black solid;
+    border-radius: 15px;
+    padding: 0 5px;
+    width: 34vw;
+    height: 50px;
+}
+
+#contactSubmit {
+    margin: 5px;;
+    border: 1.5px black solid;
+    border-radius: 15px;
+    width: 80px;
+    height: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+}
+
+#contactSubmit:hover {color: #f51204;}
+
+
+/*Styling for saved for later page below*/
+
+/*Page header*/
+#savedHeader {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.4em;
+    font-style: oblique;
+    text-align: center;
+    margin: 2%;
+}
+
+/*Styling for container that holds images*/
+#savedContainer { 
+    display: flex; 
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 7vh;
+}
+
+#savedContainer img {
+    width: auto;
+    height: 55vh;
+}
+#savedContainer img:hover {border: 2px solid #f51204;}
+
+
+/*The following blocks of code are the media queries to add breakpoints which alters the styling & page layout depending on the page width*/
+
+/*I've added my own styling for the nav to adjust the size, rather than using vw/vh as I found that it was too difficult to read.*/
+@media screen and (max-width: 850px){
+    nav ul {
+        font-size: 1.4em;
+    }
+}
+
+@media screen and (max-width: 750px){
+    nav ul {
+        font-size: 1.3em;
+    }
+}
+
+@media screen and (max-width: 700px){
+    nav ul {
+        font-size: 1.2em;
+    }
+
+    #quote {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 630px){
+    nav ul {
+        font-size: 1.1em;
+    }
+}
+
+/*This section is where I have made the smaller main heading and hero image appear and also altered other elements throughout the site
+as I felt the original content at this page width was unreadable and a bad user experience*/
+@media screen and (max-width: 550px){
+    nav ul {
+        font-size: 1em;
+    }
+
+    #mainheading {
+        display: none;
+    }
+
+    #mainheadingsmall {
+        display: flex;
+    }
+
+    #heroimage {
+        display: none;
+    }
+
+    #heroimagesmall {
+        display: block;
+    }
+
+    .heroLP { /*This section is altering the size and layout of the content on the 'ERA' pages*/
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center; 
+        justify-content: center;
+        margin: 5vh auto 0 auto;
+    }
+
+    #aboutEra {
+        width: 80vw;
+        height: 60vh;
+        padding: 1vw 0 0 0;
+        text-align: center;
+    }
+
+    #aboutEra p {
+        font-size: 0.7em;
+    }
+
+
+    .imageContainer {
+        width: 80vw;
+    }
+
+    #image1960 {
+        width: 80vw;
+        height: 60vh;
+    }
+
+    .rule { /*I've also had to alter the horizontal rule margin as I found there was a lot of unneeded space when shrinking the page*/
+        margin: -5vh auto 4vh auto;
+    }
+
+    #aboutDress { /*On the dress detail pages, i've made the copy wider to fit more of the page as the elements are now in a column*/
+        width: 60vw;
+    }
+
+    .dressImage img {
+        display: none;
+    }
+    
+    .dressImageSmall img {
+        display: flex;
+    }
+
+    /*Adjusted the styling for the comment form on the dress detail pages*/
+    #commentName, #commentComment {
+        width: 70vw;
+    }
+
+    /*And the margin of the horizontal rule*/
+    .ruleDressPage {
+        margin: 0 auto 4vh auto;
+    }
+
+    #aboutUs { /*And finally i've done the same for the elements on the about page*/
+        width: 60vw;
+        height: auto;
+        text-align: center;
+    }
+
+    #imageAbout {
+        width: 80vw;
+    }
+    
+}
+
+@media screen and (max-width: 400px){
+    nav ul {
+        font-size: 0.9em;
+    }
+}
