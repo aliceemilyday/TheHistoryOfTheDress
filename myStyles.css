@@ -434,6 +434,7 @@ add this styling.*/
     margin: 0.5% 5%;
     padding: 1%;
     border: 2px black solid;
+    text-align: center;
 }
 
 .comment h4 {
