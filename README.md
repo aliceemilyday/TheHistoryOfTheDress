@@ -17,7 +17,7 @@
 ### Project Description
 
 The aim of this project was to create a dynamic website, utilising the skills we have developed in **HTML**, **CSS** and **JavaScript.** <br/>
-I have created a website called *'The History of The Dress'* which celebrates specific eras that changed the iconic garment and shines a light on dresses from that time.<br/>
+I have created a website called *'The History of The Dress'* which celebrates specific eras that changed the iconic garment and shines a light on dresses from that time.<br/> 
 As you navigate through the website, you will see examples of **responsive design**, **object-oriented** and **defensive programming**, **functions**, **control structures**,
 **DOM manipulation**, **event handling** and usage of **local storage**.
 
